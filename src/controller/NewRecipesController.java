@@ -1,5 +1,6 @@
 package controller;
 
+import database.DB;
 import static database.HibernateUtil.getSessionFactory;
 import database.NewRecipe;
 import java.io.IOException;
@@ -83,7 +84,7 @@ public class NewRecipesController extends Navigation {
 
             Query query = session.createSQLQuery("SELECT * from new_recipe where section=? and user_id=?").addEntity(NewRecipe.class);
             query.setString(0, lbDrink.getText());
-            query.setString(1,String.valueOf(CurrentUser.id));
+            query.setString(1, String.valueOf(CurrentUser.id));
 
             List<NewRecipe> recipe_list = query.list();
 
@@ -98,7 +99,8 @@ public class NewRecipesController extends Navigation {
 
             stage.show();
 
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println(e.getMessage());
             System.exit(0);
         }
@@ -107,30 +109,20 @@ public class NewRecipesController extends Navigation {
 
     @FXML
     private void show_dessert_page(ActionEvent event) {
-        Session session = getSessionFactory().openSession();
+
         try {
-            session.beginTransaction();
 
-            Query query = session.createSQLQuery("SELECT * from new_recipe where section=? and user_id=?").addEntity(NewRecipe.class);
-            query.setString(0, lbDessert.getText());
-            query.setString(1,String.valueOf(CurrentUser.id));
-
-            List<NewRecipe> recipe_list = query.list();
-
-            session.getTransaction().commit();
-            session.close();
+            List<NewRecipe> recipe_list = 
+                    DB.getList("FROM NewRecipe WHERE userId = ? AND section = ?",
+                    CurrentUser.id, lbDessert.getText());
 
             Scene scene = move(recipe_list, lbDessert.getText());
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
             stage.setScene(scene);
-
             stage.show();
-
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println(e.getMessage());
-            System.exit(0);
         }
 
     }
@@ -143,7 +135,7 @@ public class NewRecipesController extends Navigation {
 
             Query query = session.createSQLQuery("SELECT * from new_recipe where section=? and user_id=?").addEntity(NewRecipe.class);
             query.setString(0, lbAppetizer.getText());
-            query.setString(1,String.valueOf(CurrentUser.id));
+            query.setString(1, String.valueOf(CurrentUser.id));
 
             List<NewRecipe> recipe_list = query.list();
 
@@ -158,7 +150,8 @@ public class NewRecipesController extends Navigation {
 
             stage.show();
 
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println(e.getMessage());
             System.exit(0);
         }
@@ -173,7 +166,7 @@ public class NewRecipesController extends Navigation {
 
             Query query = session.createSQLQuery("SELECT * from new_recipe where section=? and user_id=?").addEntity(NewRecipe.class);
             query.setString(0, lbMain.getText());
-            query.setString(1,String.valueOf(CurrentUser.id));
+            query.setString(1, String.valueOf(CurrentUser.id));
 
             List<NewRecipe> recipe_list = query.list();
 
@@ -188,7 +181,8 @@ public class NewRecipesController extends Navigation {
 
             stage.show();
 
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println(e.getMessage());
             System.exit(0);
         }

@@ -8,13 +8,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
  *
- * @author user
+ * @author Rehab
  */
 public class ViewRecipeController {
 
@@ -27,8 +26,13 @@ public class ViewRecipeController {
     @FXML
     private Label lblMethod;
 
-    public void view(String recipe_method, String recipe_id, String recipe_name) {
+    boolean isFromHomePage;
 
+    public void view(String recipe_method, String recipe_id, String recipe_name, boolean fromHome) {
+       
+        // to know when go back to which page 
+        isFromHomePage = fromHome;
+        
         Session session = getSessionFactory().openSession();
 
         session.beginTransaction();
@@ -51,6 +55,12 @@ public class ViewRecipeController {
 
     @FXML
     private void btBack(ActionEvent event) throws IOException {
-        Navigation.changeScene(event, "/view/MyRecipes.fxml");
+       
+        if (isFromHomePage) {
+            Navigation.changeScene(event, "/view/HomePage.fxml");
+        }
+        else {
+            Navigation.changeScene(event, "/view/MyRecipes.fxml");
+        }
     }
 }

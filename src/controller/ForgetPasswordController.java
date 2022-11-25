@@ -78,6 +78,7 @@ public class ForgetPasswordController {
             }
 
         }
+        
         Session session = getSessionFactory().openSession();
         Query query = session.createSQLQuery("update user  set user_password=? where user_id=?").addEntity(User.class);
         query.setString(0, passwordField.getText());

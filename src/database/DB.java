@@ -44,6 +44,25 @@ public class DB {
         return list;  
     } 
     
+    // get list of object from database
+    public static Long count(String queryCommand, Object... parameters) {
+        
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+               
+        // create query and set its command
+        Query query = session.createQuery(queryCommand);           
+        for (int i = 0; i < parameters.length; i++) {
+            query.setParameter(i, parameters[i]);           
+        }
+        
+        Long count = (Long) query.uniqueResult();
+       
+        session.getTransaction().commit();
+        session.close();        
+        return count;  
+    } 
+    
     public static boolean isExist(String queryCommand, Object... parameters) {
         Object obj = getObject(queryCommand, parameters);
         return obj != null;

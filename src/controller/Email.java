@@ -17,7 +17,7 @@ import javax.mail.Authenticator;
 public class Email {
     
     final static String SENDER_EMAIL = "maqadeer.app@gmail.com";
-    final static String SENDER_PASSWORD = "bntgaeudczlexisk";
+    final static String SENDER_PASSWORD = "kbhfyzlihsfhosia";
     final static String MAIL_SERVER_HOST = "smtp.gmail.com";
     final static String MAIL_SERVER_PORT = "465";
 

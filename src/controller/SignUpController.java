@@ -1,6 +1,7 @@
 package controller;
 
 import static controller.Email.generate_rand;
+import database.DB;
 import static database.HibernateUtil.getSessionFactory;
 import database.User;
 import java.io.IOException;
@@ -62,16 +63,17 @@ public class SignUpController {
     private void signUp(ActionEvent event) throws IOException {
         Session session = getSessionFactory().openSession();
 
-        if (userNameField.getText().isEmpty() && emailField.getText().isEmpty() && passwordField.getText().isEmpty() && chkPasswordField.getText().isEmpty()) {
-            nameMsg.setText("يرجى تعبئة الحقل الفاضي");
-            emailMsg.setText("يرجى تعبئة الحقل الفاضي");
-            passwordMsg.setText("يرجى تعبئة الحقل الفاضي");
-            chkPasswordMsg.setText("يرجى تعبئة الحقل الفاضي");
+        if (userNameField.getText().isEmpty() && emailField.getText().isEmpty() 
+            && passwordField.getText().isEmpty() && chkPasswordField.getText().isEmpty()) {
+            nameMsg.setText("يرجى تعبئة الحقل ");
+            emailMsg.setText("يرجى تعبئة الحقل ");
+            passwordMsg.setText("يرجى تعبئة الحقل ");
+            chkPasswordMsg.setText("يرجى تعبئة الحقل ");
             return;
 
         } else {
             if (userNameField.getText().isEmpty()) {
-                nameMsg.setText("يرجى تعبئة الحقل الفاضي");
+                nameMsg.setText("يرجى تعبئة الحقل ");
                 return;
 
             } else if (!userNameField.getText().matches("[A-Z|a-z][A-z|a-z|0-9]*")) {
@@ -80,6 +82,10 @@ public class SignUpController {
 
             } else {
                 nameMsg.setText("");
+                
+//                if (DB.isExist("FROM User WHERE userName = ?", userNameField.getText())) {
+//                    nameMsg.setText("هناك شخص ما لديه هذا الاسم, جرب اسما مختلفا ");
+//                }
 
                 Query query = session.createQuery("from User u where u.name = :name ");
                 query.setParameter("name", userNameField.getText());
@@ -94,7 +100,7 @@ public class SignUpController {
 
             }
             if (emailField.getText().isEmpty()) {
-                emailMsg.setText("يرجى تعبئة الحقل الفاضي");
+                emailMsg.setText("يرجى تعبئة الحقل ");
                 return;
 
             } else if (!emailField.getText().matches("^(.+)@(.+)$")) {
@@ -118,7 +124,7 @@ public class SignUpController {
             }
 
             if (passwordField.getText().isEmpty()) {
-                passwordMsg.setText("يرجى تعبئة الحقل الفاضي");
+                passwordMsg.setText("يرجى تعبئة الحقل ");
                 return;
 
             } else if (!passwordField.getText().matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$")) {

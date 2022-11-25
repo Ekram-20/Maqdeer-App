@@ -12,7 +12,7 @@
     -fx-border-radius :2.0em;
     -fx-pref-width: 16.5;
     -fx-padding: 3;
-    
+
 }
 
 
@@ -32,14 +32,14 @@
 
 }
 
- .scroll-bar .increment-arrow,
- .scroll-bar .decrement-arrow{
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow{
     -fx-shape : " ";    
     -fx-padding :0.15em 0.0;
 }
 
- .scroll-bar:vertical .increment-arrow,
- .scroll-bar:vertical .decrement-arrow{
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow{
     -fx-shape : " ";    
     -fx-padding :0.0 0.15em;
 }
@@ -55,5 +55,24 @@
     -fx-background-color :derive(#4D4C4F,10.0%);
     -fx-background-insets : 2.0, 0.0, 0.0;
     -fx-background-radius : 2.0em;    
+}
+
+.button {
+    -fx-background-color:  transparent;
+}
+
+.black-button {
+    -fx-background-color:  #020106;
+}
+
+.button:hover, .black-button:hover, .toggle-button:hover {    
+    -fx-opacity: 0.9;
+    /*-fx-background-color: red;*/
+    -fx-cursor: hand;
+}
+
+.underline:hover {
+    -fx-underline: true;
+    -fx-cursor: hand;
 }
 

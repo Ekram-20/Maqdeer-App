@@ -48,7 +48,7 @@
                         <Image url="@images/coffee.jpg" />
                      </image>
                   </ImageView>
-                  <Button fx:id="btdrinks" mnemonicParsing="false" onAction="#show_drinks_page" opacity="0.0" prefHeight="224.0" prefWidth="159.0" />
+                  <Button fx:id="btdrinks" mnemonicParsing="false" onAction="#show_drinks_page" opacity="0.0" prefHeight="224.0" prefWidth="159.0" styleClass="not-btn" />
                </children>
             </Pane>
             <Label fx:id="lbDrink" text="مشروبات">
@@ -70,7 +70,7 @@
                         <Image url="@images/ice%20cream.jpg" />
                      </image>
                   </ImageView>
-                  <Button fx:id="btdessert" layoutX="-1.0" layoutY="2.0" mnemonicParsing="false" onAction="#show_dessert_page" opacity="0.0" prefHeight="208.0" prefWidth="150.0" />
+                  <Button fx:id="btdessert" layoutX="-1.0" layoutY="2.0" mnemonicParsing="false" onAction="#show_dessert_page" opacity="0.0" prefHeight="208.0" prefWidth="150.0" styleClass="not-btn" />
                </children>
             </Pane>
             <Label fx:id="lbDessert" text="حلويات">
@@ -90,12 +90,12 @@
          <children>
             <Pane prefHeight="183.0" prefWidth="162.0">
                <children>
-                  <ImageView fitHeight="175.0" fitWidth="159.0" pickOnBounds="true">
+                  <ImageView fitHeight="175.0" fitWidth="159.0" pickOnBounds="true" styleClass="not-btn">
                      <image>
                         <Image url="@images/strob.jpg" />
                      </image>
                   </ImageView>
-                  <Button fx:id="btappetizers" layoutY="10.0" mnemonicParsing="false" onAction="#show_appetizers_page" opacity="0.0" prefHeight="145.0" prefWidth="166.0" text="Button" />
+                  <Button fx:id="btappetizers" layoutY="10.0" mnemonicParsing="false" onAction="#show_appetizers_page" opacity="0.0" prefHeight="145.0" prefWidth="166.0" />
                   <Label fx:id="lbAppetizer" layoutX="60.0" layoutY="164.0" text="مقبلات ">
                      <padding>
                         <Insets top="10.0" />
@@ -114,7 +114,7 @@
             </ImageView>
             <Pane prefHeight="0.0" prefWidth="313.0">
                <children>
-                  <Button fx:id="btmaincourse" layoutY="-207.0" mnemonicParsing="false" onAction="#show_main_course_page" opacity="0.0" prefHeight="208.0" prefWidth="156.0" />
+                  <Button fx:id="btmaincourse" layoutY="-207.0" mnemonicParsing="false" onAction="#show_main_course_page" opacity="0.0" prefHeight="208.0" prefWidth="156.0" styleClass="not-btn" />
                </children>
             </Pane>
             <Label fx:id="lbMain" text="أطباق رئيسية">

@@ -95,9 +95,7 @@ public class DisplayRecipesController {
 
             try {
                 Desktop.getDesktop().browse(new URI(link));
-            } catch (URISyntaxException ex) {
-                Logger.getLogger(DisplayRecipesController.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (IOException ex) {
+            } catch (URISyntaxException | IOException ex) {
                 Logger.getLogger(DisplayRecipesController.class.getName()).log(Level.SEVERE, null, ex);
             }
         });

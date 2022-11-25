@@ -51,18 +51,18 @@
       <Button layoutX="151.0" layoutY="586.0" mnemonicParsing="false" onAction="#suggestOtherRecipe" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #FF9A50; -fx-background-radius: 30; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.3) , 10,0,0,1 );" text="اقتراح آخر" textFill="WHITE" />
       <Button contentDisplay="TOP" layoutX="204.0" layoutY="236.0" mnemonicParsing="false" onAction="#suggestMainCourse" prefHeight="126.0" prefWidth="154.0" style="-fx-background-radius: 10; -fx-background-color: #ADDAD1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="رئيسية">
          <graphic>
-            <ImageView fitHeight="91.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="84.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/mal.jpg" />
+                  <Image url="@images/course-mael.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
       <Button contentDisplay="TOP" layoutX="45.0" layoutY="235.0" mnemonicParsing="false" onAction="#suggestAppetizer" prefHeight="170.0" prefWidth="142.0" style="-fx-background-radius: 10; -fx-background-color: #CCDACD; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="مقبلات">
          <graphic>
-            <ImageView fitHeight="99.0" fitWidth="110.0" pickOnBounds="true">
+            <ImageView fitHeight="116.0" fitWidth="98.0" pickOnBounds="true">
                <image>
-                  <Image url="@images/sld.jpg" />
+                  <Image url="@images/salad.png" />
                </image>
             </ImageView>
          </graphic>
@@ -154,6 +154,15 @@
             <ImageView fitHeight="33.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/log_out_Icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="355.0" layoutY="6.0" mnemonicParsing="false" onAction="#goProfilePage" prefHeight="12.0" prefWidth="20.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/userIcon.png" />
                </image>
             </ImageView>
          </graphic>

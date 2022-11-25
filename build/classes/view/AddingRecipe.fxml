@@ -43,9 +43,9 @@
          <children>
             <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#chooseDrinks" prefHeight="89.0" prefWidth="82.0" style="-fx-background-radius: 10; -fx-background-color: #F9D98B; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="مشروبات">
                <graphic>
-                  <ImageView fitHeight="54.0" fitWidth="50.0" pickOnBounds="true">
+                  <ImageView fitHeight="54.0" fitWidth="38.0" pickOnBounds="true">
                      <image>
-                        <Image url="@images/juse.jpg" />
+                        <Image url="@images/jucie-icon.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -55,9 +55,9 @@
             </Button>
             <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#chooseAppetizer" prefHeight="88.0" prefWidth="69.0" style="-fx-background-radius: 10; -fx-background-color: #CCDACD; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="مقبلات">
                <graphic>
-                  <ImageView fitHeight="53.0" fitWidth="55.0" pickOnBounds="true">
+                  <ImageView fitHeight="59.0" fitWidth="52.0" pickOnBounds="true">
                      <image>
-                        <Image url="@images/sld.jpg" />
+                        <Image url="@images/salad.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -67,9 +67,9 @@
             </Button>
             <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#chooseDessert" prefHeight="89.0" prefWidth="75.0" style="-fx-background-radius: 10; -fx-background-color: #FEA597; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="حلويات">
                <graphic>
-                  <ImageView fitHeight="49.0" fitWidth="47.0" pickOnBounds="true">
+                  <ImageView fitHeight="59.0" fitWidth="56.0" pickOnBounds="true">
                      <image>
-                        <Image url="@images/desrt.jpg" />
+                        <Image url="@images/oneline-cake.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -79,9 +79,9 @@
             </Button>
             <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#chooseMainCourse" prefHeight="89.0" prefWidth="65.0" style="-fx-background-radius: 10; -fx-background-color: #ADDAD1; -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );" text="رئيسية">
                <graphic>
-                  <ImageView fitHeight="58.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="57.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/mal.jpg" />
+                        <Image url="@images/course-mael.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -133,7 +133,7 @@
             <TextArea fx:id="tfMethod" nodeOrientation="RIGHT_TO_LEFT" prefHeight="107.0" prefWidth="331.0" style="-fx-border-width: 0;" text="&#10;" />
          </content>
       </ScrollPane>
-      <Button layoutX="152.0" layoutY="624.0" mnemonicParsing="false" onAction="#addRecipe" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #FF9A50; -fx-background-radius: 30;" text="اضافة طبخة" textFill="WHITE">
+      <Button layoutX="152.0" layoutY="622.0" mnemonicParsing="false" onAction="#addRecipe" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #FF9A50; -fx-background-radius: 30;" text="اضافة طبخة" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>

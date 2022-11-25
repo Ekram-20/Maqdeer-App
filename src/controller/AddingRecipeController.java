@@ -13,7 +13,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -88,14 +87,14 @@ public class AddingRecipeController extends Navigation {
             isComplete = false;
         }
 
-        // ingredient fields: the use has entered them
+        // ingredient fields: the use has entered them in the array
         if (ingredients.isEmpty()) {
             lblIngredientMsg.setTextFill(Color.rgb(188, 5, 5));
             lblIngredientMsg.setText("يجب عليك إضافة مكونات للطبخة");
             isComplete = false;
         }
 
-        // recipe category
+        // check recipe category
         if (recipeToAdd.getCategory() == null) {
             lblCategoryMsg.setText("اختر تصنيف للطبخة");
             isComplete = false;
@@ -142,6 +141,8 @@ public class AddingRecipeController extends Navigation {
         clearTextFields(tfRecipeName, tfIngredientName, tfIngredientQuantity, tfIngredientUnit);
         clearLabels(lblRecipeNameMsg, lblIngredientMsg, lblCategoryMsg, lblCategory, lblSuccess);
         tfMethod.setText("");
+        
+        // display successfull message
         lblSuccess.setText("تم إضافة الطبخة بنجاح"); 
     }
 
@@ -149,6 +150,7 @@ public class AddingRecipeController extends Navigation {
     // Action in add Button to add ingredients in list not database   
     private void addIngredient(ActionEvent event) {
         
+        // get the infromation of each ingredient
         String name = tfIngredientName.getText();
         String quantity = tfIngredientQuantity.getText();
         String unit = tfIngredientUnit.getText();
@@ -165,6 +167,7 @@ public class AddingRecipeController extends Navigation {
             lblIngredientMsg.setText("هذا المكون تم إضافته مسبقا");
         }
         else {
+            // add the ingredient to temprerly array
             ingredients.add(new Ingredient(name, new Double(quantity), unit));
             lblIngredientMsg.setTextFill(Color.GREEN);
             lblIngredientMsg.setText("تم إضافة " + name + " بنجاح "); 
@@ -211,7 +214,7 @@ public class AddingRecipeController extends Navigation {
         }
     }
 
-    // when use put the focus (Pointer> in some field 
+    // when user put the focus (Pointer) in some field 
     private void clearLabels(MouseEvent event) {
         clearLabels(lblRecipeNameMsg, lblIngredientMsg, lblCategoryMsg, lblSuccess);
     }

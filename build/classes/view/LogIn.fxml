@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -91,7 +92,7 @@
                </font></Label>
          </children>
       </VBox>
-      <Button fx:id="btSubmit" layoutX="181.0" layoutY="631.0" minWidth="53.0" mnemonicParsing="false" onAction="#logIn" prefHeight="33.0" prefWidth="53.0" style="-fx-background-color: #020106; -fx-background-radius: 10;" text="دخول" textFill="WHITE">
+      <Button fx:id="btSubmit" layoutX="167.0" layoutY="631.0" minWidth="53.0" mnemonicParsing="false" onAction="#logIn" prefHeight="34.0" prefWidth="93.0" style="-fx-background-radius: 10;" styleClass="black-button" text="دخول" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -106,18 +107,24 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <VBox layoutX="126.0" layoutY="560.0" prefHeight="50.0" prefWidth="165.0" spacing="5.0">
+      <VBox layoutX="133.0" layoutY="560.0" prefHeight="50.0" prefWidth="165.0" spacing="5.0">
          <children>
-            <Label fx:id="lblForgetPassword" alignment="CENTER" onMouseClicked="#goForgetPasswordPage" prefHeight="24.0" prefWidth="170.0" text="هل نسيت كلمة المرور؟">
+            <Label fx:id="lblForgetPassword" alignment="CENTER" onMouseClicked="#goForgetPasswordPage" prefHeight="24.0" prefWidth="170.0" styleClass="underline" text="هل نسيت كلمة المرور؟">
                <font>
                   <Font size="15.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
              
             </Label>
-            <Label fx:id="btlSignUp" alignment="CENTER" onMouseClicked="#goSignUpPage" prefHeight="22.0" prefWidth="162.0" text="إنشاء حساب جديد">
+            <Label fx:id="lblSignUp" alignment="CENTER" onMouseClicked="#goSignUpPage" prefHeight="22.0" prefWidth="162.0" styleClass="underline" text="إنشاء حساب جديد">
                <font>
                   <Font size="15.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
              
             </Label>
          </children>

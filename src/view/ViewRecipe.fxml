@@ -8,7 +8,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
@@ -53,19 +52,12 @@
             </Label>
          </content>
       </ScrollPane>
-      <Pane layoutX="-1.0" prefHeight="48.0" prefWidth="61.0">
-         <children>
-            <Pane layoutX="-3.0" prefHeight="48.0" prefWidth="62.0">
-               <children>
-                  <ImageView fitHeight="22.0" fitWidth="39.0" layoutX="25.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" x="-5.0" y="1.0">
-                     <image>
-                        <Image url="@images/pngegg%20(5).png" />
-                     </image>
-                  </ImageView>
-                  <Button fx:id="btAdd1" layoutX="7.0" mnemonicParsing="false" onAction="#btBack" opacity="0.0" prefHeight="48.0" prefWidth="51.0" textFill="TRANSPARENT" />
-               </children>
-            </Pane>
-         </children></Pane>
+      <ImageView fitHeight="30.0" fitWidth="39.0" layoutX="13.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pngegg%20(5).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btAdd1" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#btBack" opacity="0.0" prefHeight="26.0" prefWidth="30.0" style="-fx-background-color: transparent;" textFill="TRANSPARENT" />
       <HBox layoutX="130.0" layoutY="647.0" />
       <ScrollPane layoutX="31.0" layoutY="401.0" prefHeight="239.0" prefWidth="334.0">
          <content>

@@ -139,7 +139,7 @@ public class HomePageController extends Navigation {
         scene.getStylesheets().add(Navigation.class.getResource("/view/style.css").toExternalForm());
 
         ViewRecipeController controller = loader.getController();
-        controller.view(recipe.getMethod(), String.valueOf(recipe.getId()), recipe.getName());
+        controller.view(recipe.getMethod(), String.valueOf(recipe.getId()), recipe.getName(), true);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
@@ -161,6 +161,11 @@ public class HomePageController extends Navigation {
             return;
         
         lblSuggestedRecipe.setUnderline(true);
+    }    
+
+    @FXML
+    private void goProfilePage(ActionEvent event) throws IOException {
+        Navigation.changeScene(event, "/view/Profile.fxml");   
     }
 
 }

@@ -140,7 +140,7 @@ public class MyRecipesController extends Navigation {
 
         if (recipe != null) {
 
-            controller.view(recipe.getMethod(), String.valueOf(recipe.getId()), recipe.getName());
+            controller.view(recipe.getMethod(), String.valueOf(recipe.getId()), recipe.getName(), false);
 
         }
 
